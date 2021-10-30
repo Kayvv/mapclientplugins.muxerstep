@@ -1,0 +1,6 @@
+
+<RCC>
+  <qresource prefix="muxerstep">
+    <file>images/utility.png</file>
+  </qresource>
+</RCC>
