@@ -6,7 +6,7 @@ The **Muxer** is a MAP Client plugin for muxing together multiple inputs into a 
 .. _fig-mcp-muxer-un-configured-step:
 
 .. figure:: _images/un-configured-step.png
-   :alt: Un-onfigured step icon
+   :alt: Un-configured step icon
 
    An un-configured *Muxer* step icon.
 
@@ -29,3 +29,16 @@ The *Number of inputs* parameter should be set to the number of inputs to mux to
 
 The step will accept either single inputs or list of inputs for each port.
 All list inputs will be expanded on output so that the resulting output will be a single level list.
+
+Ports
+-----
+
+This plugin:
+
+* **uses**:
+
+  * A user defined count of a user defined type.
+
+* **provides**:
+
+  * A flattened *list-of* the user defined type.
