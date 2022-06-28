@@ -75,7 +75,7 @@ class Ui_ConfigureDialog(object):
     # setupUi
 
     def retranslateUi(self, ConfigureDialog):
-        ConfigureDialog.setWindowTitle(QCoreApplication.translate("ConfigureDialog", u"Configure Step", None))
+        ConfigureDialog.setWindowTitle(QCoreApplication.translate("ConfigureDialog", u"Configure Muxer", None))
         self.configGroupBox.setTitle("")
         self.label0.setText(QCoreApplication.translate("ConfigureDialog", u"Identifier:  ", None))
         self.lineEditIdentifier.setText(QCoreApplication.translate("ConfigureDialog", u"Muxer", None))
