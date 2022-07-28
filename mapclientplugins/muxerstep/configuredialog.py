@@ -24,6 +24,8 @@ class ConfigureDialog(QtWidgets.QDialog):
         # We will use this method to decide whether the identifier is unique.
         self.identifierOccursCount = None
 
+        self.setWhatsThis("Please read documentation: \nhttps://abi-mapping-tools.readthedocs.io/en/latest/mapclientplugins.muxerstep/docs/index.html")
+
         self._make_connections()
 
     def _make_connections(self):
