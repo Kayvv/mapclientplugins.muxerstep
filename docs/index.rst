@@ -1,14 +1,26 @@
-MAP Client Plugin - Muxer
-=========================
+Muxer
+=====
+
+Overview
+--------
 
 The **Muxer** is a MAP Client plugin for muxing together multiple inputs into a list.
 
-.. _fig-mcp-muxer-un-configured-step:
+Workflow Connections
+--------------------
 
-.. figure:: _images/un-configured-step.png
-   :alt: Un-configured step icon
+The **Muxer** can have a various number of a user defined type of input. The number and type can be set in config. And the output would be a flattened *list-of* the user defined type. 
 
-   An un-configured *Muxer* step icon.
+For example, :numref:`fig-mcp-muxer-workflow-connections` shows a workflow connection uses 3 *https://opencmiss.org/1.0/rdf-schema#file_location* type of inputs.
+
+.. _fig-mcp-muxer-workflow-connections:
+
+.. figure:: _images/workflow-connections.png
+   :alt: Muxer workflow connections.
+   :align: center
+   :figwidth: 75%
+
+   **Muxer** workflow connections.
 
 Configure
 ---------
@@ -29,16 +41,3 @@ The *Number of inputs* parameter should be set to the number of inputs to mux to
 
 The step will accept either single inputs or list of inputs for each port.
 All list inputs will be expanded on output so that the resulting output will be a single level list.
-
-Ports
------
-
-This plugin:
-
-* **uses**:
-
-  * A user defined count of a user defined type.
-
-* **provides**:
-
-  * A flattened *list-of* the user defined type.
