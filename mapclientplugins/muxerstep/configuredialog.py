@@ -68,7 +68,7 @@ class ConfigureDialog(QtWidgets.QDialog):
         else:
             self._ui.lineEditIdentifier.setStyleSheet(INVALID_STYLE_SHEET)
 
-        port_type_valid = len(self._ui.lineEditPortType.text()) > 0
+        port_type_valid = len(self._ui.comboBoxMuxType.currentText()) > 0
 
         return valid and port_type_valid
 
@@ -81,7 +81,7 @@ class ConfigureDialog(QtWidgets.QDialog):
         self._previousIdentifier = self._ui.lineEditIdentifier.text()
         config = {
             'identifier': self._ui.lineEditIdentifier.text(),
-            'port_type': self._ui.lineEditPortType.text(),
+            'port_type': self._ui.comboBoxMuxType.currentText(),
             'input_port_count': self._ui.spinBoxNumberOfInputs.value()
         }
         return config
@@ -94,5 +94,5 @@ class ConfigureDialog(QtWidgets.QDialog):
         """
         self._previousIdentifier = config['identifier']
         self._ui.lineEditIdentifier.setText(config['identifier'])
-        self._ui.lineEditPortType.setText(config['port_type'])
+        self._ui.comboBoxMuxType.setCurrentText(config['port_type'])
         self._ui.spinBoxNumberOfInputs.setValue(config['input_port_count'])
